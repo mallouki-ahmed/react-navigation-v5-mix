@@ -35,7 +35,7 @@ export default class MyComponent extends React.Component {
 
         <DataTable.Row>
           <DataTable.Cell>Ice cream sandwich</DataTable.Cell>
-          <DataTable.Cell numeric>237</DataTable.Cell>
+          <DataTable.Cell numeric>257</DataTable.Cell>
           <DataTable.Cell numeric>8.0</DataTable.Cell>
         </DataTable.Row>
       </DataTable>
