@@ -1,31 +1,56 @@
 import React from 'react';
-import { View, Text, Button, StyleSheet, StatusBar } from 'react-native';
-import { useTheme } from '@react-navigation/native';
 
-const HomeScreen = ({navigation}) => {
+import {Searchbar} from 'react-native-paper';
+import {View, Text, StyleSheet} from 'react-native';
+import {DataTable} from 'react-native-paper';
 
-  const { colors } = useTheme();
+export default class MyComponent extends React.Component {
+  state = {
+    searchQuery: '',
+  };
 
-  const theme = useTheme();
-  
+  _onChangeSearch = query => this.setState({searchQuery: query});
+
+  render() {
+    const {searchQuery} = this.state;
     return (
-      <View style={styles.container}>
-        <StatusBar barStyle= { theme.dark ? "light-content" : "dark-content" }/>
-        <Text style={{color: colors.text}}>Home Screen</Text>
-      <Button
-        title="Go to details screen"
-        onPress={() => navigation.navigate("Details")}
-      />
-      </View>
+      <DataTable>
+        <DataTable.Header>
+          <DataTable.Title>Dessert</DataTable.Title>
+          <DataTable.Title numeric>Calories</DataTable.Title>
+          <DataTable.Title numeric>Fat</DataTable.Title>
+        </DataTable.Header>
+
+        <DataTable.Row>
+          <DataTable.Cell>Frozen yogurt</DataTable.Cell>
+          <DataTable.Cell numeric>159</DataTable.Cell>
+          <DataTable.Cell numeric>6.0</DataTable.Cell>
+        </DataTable.Row>
+
+        <DataTable.Row>
+          <DataTable.Cell>Ice cream sandwich</DataTable.Cell>
+          <DataTable.Cell numeric>237</DataTable.Cell>
+          <DataTable.Cell numeric>8.0</DataTable.Cell>
+        </DataTable.Row>
+
+        <DataTable.Row>
+          <DataTable.Cell>Ice cream sandwich</DataTable.Cell>
+          <DataTable.Cell numeric>237</DataTable.Cell>
+          <DataTable.Cell numeric>8.0</DataTable.Cell>
+        </DataTable.Row>
+      </DataTable>
     );
-};
-
-export default HomeScreen;
-
+  }
+}
 const styles = StyleSheet.create({
-  container: {
-    flex: 1, 
-    alignItems: 'center', 
-    justifyContent: 'center'
+  cards: {
+    marginTop: 20,
+    width: '100%',
+    padding: 10,
+  },
+  search: {
+    marginLeft: 40,
+    marginTop: 20,
+    width: '80%',
   },
 });
