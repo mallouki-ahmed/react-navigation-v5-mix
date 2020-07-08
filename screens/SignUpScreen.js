@@ -78,7 +78,7 @@ const SignInScreen = ({navigation}) => {
         firstName: data.username,
         lastName: data.username,
         password: data.password,
-        email: data.username + '@gmail.com',
+        email: data.username,
         role: 1,
       }),
     );
