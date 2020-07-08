@@ -19,7 +19,7 @@ class ExploreScreen extends Component {
         ],
         color: '#297AB1',
       },
-      /*       {
+      {
         seriesName: 'series2',
         data: [
           {x: '2018-02-01', y: 20},
@@ -29,7 +29,18 @@ class ExploreScreen extends Component {
           {x: '2018-02-05', y: 40},
         ],
         color: 'yellow',
-      }, */
+      },
+      {
+        seriesName: 'series3',
+        data: [
+          {x: '2018-02-01', y: 10},
+          {x: '2018-02-02', y: 10},
+          {x: '2018-02-03', y: 130},
+          {x: '2018-02-04', y: 50},
+          {x: '2018-02-05', y: 40},
+        ],
+        color: 'green',
+      },
     ];
     return (
       <View

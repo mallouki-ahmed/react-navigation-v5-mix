@@ -27,6 +27,7 @@ import MainTabScreen from './screens/MainTabScreen';
 import SupportScreen from './screens/SupportScreen';
 import SettingsScreen from './screens/SettingsScreen';
 import BookmarkScreen from './screens/BookmarkScreen';
+import ChartView from './screens/ChartView';
 
 import {AuthContext} from './components/context';
 
@@ -118,7 +119,6 @@ const App = () => {
         setIsLoading(false);
         const userToken = String(foundUser[0].userToken);
         const userName = foundUser[0].username;
-
         try {
           await AsyncStorage.setItem('userToken', userToken);
         } catch (e) {
@@ -181,6 +181,7 @@ const App = () => {
               <Drawer.Screen name="SupportScreen" component={SupportScreen} />
               <Drawer.Screen name="SettingsScreen" component={SettingsScreen} />
               <Drawer.Screen name="BookmarkScreen" component={BookmarkScreen} />
+              <Drawer.Screen name="ChartView" component={ChartView} />
             </Drawer.Navigator>
           ) : (
             <RootStackScreen />
