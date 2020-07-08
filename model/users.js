@@ -62,4 +62,32 @@ export default (Users = [
     password: '11111111',
     userToken: 'token',
   },
+  {
+    id: 10,
+    email: 'testKhawla@gmail.com',
+    username: 'testKhawla@gmail.com',
+    password: '11111111',
+    userToken: 'token',
+  },
+  {
+    id: 11,
+    email: 'testKhawla22@gmail.com',
+    username: 'testKhawla22@gmail.com',
+    password: '11111111',
+    userToken: 'token',
+  },
+  {
+    id: 12,
+    email: 'testKhawla11@gmail.com',
+    username: 'testKhawla11@gmail.com',
+    password: '11111111',
+    userToken: 'token',
+  },
+  {
+    id: 13,
+    email: 'kh44@gmail.com',
+    username: 'kh44@gmail.com',
+    password: '11111111',
+    userToken: 'token',
+  },
 ]);
