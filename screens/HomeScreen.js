@@ -2,8 +2,8 @@ import React from 'react';
 
 import {Searchbar} from 'react-native-paper';
 import {View, Text, StyleSheet} from 'react-native';
-import {DataTable} from 'react-native-paper';
-
+import {DataTable,Button} from 'react-native-paper';
+import Search from "./SearchbarHome"
 export default class MyComponent extends React.Component {
   state = {
     searchQuery: '',
@@ -14,31 +14,58 @@ export default class MyComponent extends React.Component {
   render() {
     const {searchQuery} = this.state;
     return (
-      <DataTable>
+      <View>
+        <View style={styles.search}>
+                <View style={styles.searcht}>
+
+        <Searchbar
+      style={{borderColor: '#000000', borderWidth: 1}}
+      placeholder="Search"
+      onChangeText={this._onChangeSearch}
+      value={searchQuery}
+    />
+    </View>
+    <View>
+      <Button style={{width:100,marginTop: 30,}} mode="contained">
+                  ADD
+                </Button>
+    </View>
+    </View>
+      <DataTable style={{marginTop: 30,}}>
+      
         <DataTable.Header>
-          <DataTable.Title>Dessert</DataTable.Title>
-          <DataTable.Title numeric>Calories</DataTable.Title>
-          <DataTable.Title numeric>Fat</DataTable.Title>
+          <DataTable.Title>Khawla</DataTable.Title>
+          <DataTable.Title numeric>Show Counter</DataTable.Title>
+          <DataTable.Title numeric>Update</DataTable.Title>
+          <DataTable.Title numeric>Delete</DataTable.Title>
+
         </DataTable.Header>
 
         <DataTable.Row>
-          <DataTable.Cell>Frozen yogurt</DataTable.Cell>
-          <DataTable.Cell numeric>159</DataTable.Cell>
-          <DataTable.Cell numeric>6.0</DataTable.Cell>
+          <DataTable.Cell>Marwa</DataTable.Cell>
+          <DataTable.Cell numeric>Show Counter</DataTable.Cell>
+          <DataTable.Cell numeric>Update</DataTable.Cell>
+          <DataTable.Cell numeric>Delete</DataTable.Cell>
+
         </DataTable.Row>
 
         <DataTable.Row>
-          <DataTable.Cell>Ice cream sandwich</DataTable.Cell>
-          <DataTable.Cell numeric>237</DataTable.Cell>
-          <DataTable.Cell numeric>8.0</DataTable.Cell>
+          <DataTable.Cell>Jobran</DataTable.Cell>
+          <DataTable.Cell numeric>Show Counter</DataTable.Cell>
+          <DataTable.Cell numeric>Update</DataTable.Cell>
+         <DataTable.Cell numeric>Delete</DataTable.Cell>
+
         </DataTable.Row>
 
         <DataTable.Row>
-          <DataTable.Cell>Ice cream sandwich</DataTable.Cell>
-          <DataTable.Cell numeric>257</DataTable.Cell>
-          <DataTable.Cell numeric>8.0</DataTable.Cell>
+          <DataTable.Cell>Ahmed</DataTable.Cell>
+          <DataTable.Cell numeric>Show Counter</DataTable.Cell>
+          <DataTable.Cell numeric>Update</DataTable.Cell>
+          <DataTable.Cell numeric>Delete</DataTable.Cell>
+
         </DataTable.Row>
       </DataTable>
+      </View>
     );
   }
 }
@@ -49,8 +76,14 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   search: {
-    marginLeft: 40,
-    marginTop: 20,
-    width: '80%',
+    display:"flex",
+    flexDirection:"row",
+    justifyContent:"space-between",
+  
   },
+  searcht:{
+    marginLeft: 10,
+    marginTop: 20,
+    width: '60%',
+  }
 });
